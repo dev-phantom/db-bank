@@ -13,7 +13,7 @@ const people = [
   { id: 6, name: 'Hellen Schmidt' },
   { id: 1, name: 'Wade Cooper' },
 ]
-export default function Transfer() {
+export default function ConfirmTransfer() {
   const [selected, setSelected] = useState(people[0])
   const [query, setQuery] = useState('')
 
@@ -29,14 +29,14 @@ export default function Transfer() {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push('/ConfirmTransfer');
+    router.push('/AddAccNo');
   };
 
   return (
     <AltLayout>
       <div className="flex justify-between items-center ">
         <div className='text-[#000] pl-3 font-manrope font-semibold text-2xl'>
-            Transfer
+            Confirm Transfer Details
         </div>
         <div className='flex flex-col justify-start '>
           <div className='font-manrope font-extrabold text-3xl text-[#000]'>€8,500,000.00</div> 
@@ -51,7 +51,7 @@ export default function Transfer() {
       </div>
       <div>
         <div className="pt-3 gap-3">
-          <label htmlFor="" className="py-2">Select Account</label>
+          <label htmlFor="" className="py-2">Select Currency</label>
           <Combobox value={selected} onChange={setSelected}>
             <div className="relative mt-3">
               <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
@@ -123,7 +123,7 @@ export default function Transfer() {
               <div className="relative mt-2">
                 <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
                   <Combobox.Input
-                    className="w-full border-none outline-none py-3 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
+                    className="w-full Correspondent Bank border-none outline-none py-3 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
                     displayValue={(person) => person.name}
                     onChange={(event) => setQuery(event.target.value)}
                   />
@@ -132,6 +132,21 @@ export default function Transfer() {
               </div>
             </Combobox>
           </div>
+        </div>
+        <div  className="mt-4">
+          <label htmlFor="">Location</label>
+          <Combobox value={selected} onChange={setSelected}>
+            <div className="relative mt-2">
+              <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+                <Combobox.Input
+                  className="w-full Correspondent Bank border-none outline-none py-3 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
+                  displayValue={(person) => person.name}
+                  onChange={(event) => setQuery(event.target.value)}
+                />
+
+              </div>
+            </div>
+          </Combobox>
         </div>
         <div className='pt-9'>
           <button onClick={handleNext} className="bg-[#0018A8]  text-white w-[8rem] rounded py-3">Submit</button>

@@ -8,8 +8,8 @@ export default function SideNav() {
     { name: "Overview", link: "/", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_3_m9874k.png" },
     { name: "Accounts", link: "/Account", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_2_c1smgx.png"},
     { name: "Transfers", link: "/Transfer", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_1_2_jucj8w.png" },
-    { name: "Statements", link: "/#", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_3_m9874k.png" },
-    { name: "Transactions", link: "/#", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_4_bbrs70.png" },
+    { name: "Statements", link: "/Statement", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_3_m9874k.png" },
+    { name: "Transactions", link: "/Transactions", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_4_bbrs70.png" },
     { name: "Settings", link: "/#", icon:"https://res.cloudinary.com/phantom1245/image/upload/v1681638954/db%20bank/Group_11_h4ym2z.png" },
 
   ];
